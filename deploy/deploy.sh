@@ -23,8 +23,9 @@ git pull origin main
 echo ""
 echo "→ [2/6] Building MCP Server..."
 cd "$APP_DIR/mcp-server"
-npm ci --omit=dev
+npm install
 npm run build
+npm prune --omit=dev
 
 # ── 3. Build Web App ───────────────────────────────────────
 echo ""
