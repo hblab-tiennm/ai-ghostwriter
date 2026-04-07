@@ -69,7 +69,7 @@ export default function EditorPanel({
       prevContentRef.current = "";
       userEditedRef.current = false;
       if (!content) {
-        editor.commands.clearContent({ emitUpdate: false });
+        editor.commands.clearContent(false);
         return;
       }
     }
@@ -92,7 +92,7 @@ export default function EditorPanel({
 
     // Empty content → clear editor
     if (!content) {
-      editor.commands.clearContent({ emitUpdate: false });
+      editor.commands.clearContent(false);
       return;
     }
 
