@@ -214,7 +214,7 @@ body {
   display: flex;
   flex-direction: column;
   border-right: 1px solid var(--color-border);
-  background: rgba(255, 245, 228, 0.94);
+  background: rgba(255, 245, 228, 0.93);
   overflow: hidden;
 }
 
@@ -438,7 +438,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: rgba(255, 245, 228, 0.93);
+  background: rgba(255, 245, 228, 0.92);
 }
 
 .editor-toolbar {
