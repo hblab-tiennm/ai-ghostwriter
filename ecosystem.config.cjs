@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "mcp-server",
-      cwd: "/var/www/ai-ghostwriter/mcp-server",
+      cwd: "/root/project/ai-ghostwriter/mcp-server",
       script: "dist/http-server.js",
       node_args: "--enable-source-maps",
       env: {
@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       name: "web-app",
-      cwd: "/var/www/ai-ghostwriter/web-app",
+      cwd: "/root/project/ai-ghostwriter/web-app",
       script: "node_modules/.bin/next",
       args: "start -p 3000",
       env: {

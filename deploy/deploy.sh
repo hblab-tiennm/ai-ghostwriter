@@ -6,7 +6,7 @@
 
 set -euo pipefail
 
-APP_DIR="/var/www/ai-ghostwriter"
+APP_DIR="/root/project/ai-ghostwriter"
 cd "$APP_DIR"
 
 echo "══════════════════════════════════════════════════════"
