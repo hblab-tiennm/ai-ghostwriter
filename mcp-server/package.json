@@ -1,0 +1,31 @@
+{
+  "name": "ghostwriter-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for AI Personal Ghostwriter — BĐS FUTA Land",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "start:http": "node dist/http-server.js",
+    "dev:http": "tsc && node dist/http-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "chromadb": "^3.4.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.21.2",
+    "openai": "^6.33.0",
+    "vectra": "^0.12.3",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
