@@ -977,7 +977,11 @@ body {
   }
 
   .chat-textarea {
-    font-size: 0.85rem;
+    font-size: 16px; /* prevent iOS auto-zoom on focus */
+  }
+
+  .chat-hint {
+    display: none;
   }
 
   /* ── Bottom Navigation ── */

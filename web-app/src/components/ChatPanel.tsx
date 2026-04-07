@@ -79,7 +79,9 @@ export default function ChatPanel({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey) {
+    // On mobile (touch), let Enter add newline normally — user taps send button
+    const isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    if (e.key === "Enter" && !e.shiftKey && !isMobile) {
       e.preventDefault();
       handleSend();
     }
@@ -178,7 +180,7 @@ export default function ChatPanel({
           <textarea
             ref={textareaRef}
             className="chat-textarea"
-            placeholder="Nhập ý tưởng hoặc bullet points… (Enter để gửi)"
+            placeholder="Nhập ý tưởng (Enter để gửi)"
             value={input}
             onChange={handleInput}
             onKeyDown={handleKeyDown}
@@ -232,7 +234,7 @@ export default function ChatPanel({
           </div>
         )} */}
 
-        <p style={{
+        <p className="chat-hint" style={{
           fontSize: "0.68rem",
           color: "var(--color-muted)",
           marginTop: 6,
